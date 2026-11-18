@@ -1,0 +1,189 @@
+@font-face { font-family: 'coolvetica'; src: url('Coolvetica Rg.otf') format('opentype'); }
+@font-face { font-family: 'schoolbell'; src: url('Schoolbell-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'creatodisplay'; src: url('CreatoDisplay-Regular.otf') format('opentype'); }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("fundo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #000000;
+    min-height: 70px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    font-family: 'coolvetica', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.navbar li a:hover {
+    background-color: #1d1d1d;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 94%;
+    max-width: 700px;
+    margin: 25px auto;
+}
+
+.caixa_texto1 {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-areas: 
+        "icone titulo"
+        "texto texto"
+        "glossario glossario";
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: start;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icone1 {
+    grid-area: icone;
+    width: 65px;
+    height: auto;
+    align-self: center;
+    transform: scale(4.5);
+    transform-origin: center;
+}
+
+.titulo1 {
+    grid-area: titulo;
+    font-family: 'schoolbell';
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    align-self: center;
+}
+
+.texto1 {
+    grid-area: texto;
+    font-family: 'creatodisplay';
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.glossario {
+    grid-area: glossario;
+    padding: 15px;
+    background-color: #3a7bd5;
+    border-radius: 15px;
+    font-family: 'creatodisplay';
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+.caixa_texto2 {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-areas: 
+        "icone titulo"
+        "texto texto"
+        "tabela1 tabela1"
+        "tabela2 tabela2";
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: start;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icone2 {
+    grid-area: icone;
+    width: 65px;
+    height: auto;
+    align-self: center;
+    transform: scale(4.5);
+    transform-origin: center;
+}
+
+.titulo2 {
+    grid-area: titulo;
+    font-family: 'schoolbell';
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    align-self: center;
+}
+
+.texto2 {
+    grid-area: texto;
+    font-family: 'creatodisplay';
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tabela1, .tabela2 {
+    width: 100%;
+    font-family: 'creatodisplay';
+    font-size: 0.85rem;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.tabela1 {
+    grid-area: tabela1;
+}
+
+.tabela2 {
+    grid-area: tabela2;
+}
+
+.tabela1 th, .tabela1 td, 
+.tabela2 th, .tabela2 td {
+    border: 1px solid #000000;
+    padding: 6px;
+    text-align: left;
+}
+
+.coluna {
+    background-color: #9c7ad4;
+    color: white;
+}

@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url('Coolvetica Rg.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'schoolbell';
+    src: url('Schoolbell-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'creatodisplay';
+    src: url('CreatoDisplay-Regular.otf') format('opentype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("fundo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #000000;
+    min-height: 70px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.navbar .links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    font-family: 'coolvetica', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.navbar li a:hover {
+    background-color: #1d1d1d;
+}
+
+.container-neuronio {
+    position: relative;
+    width: 95%;
+    max-width: 680px;
+    height: auto;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#neuronio {
+    width: 100%;
+    height: auto;
+    max-height: 68vh;
+    display: block;
+    object-fit: contain;
+    transform: scale(1.35);
+}
+
+.botao1 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border: 0;
+    top: -1%;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.botao2 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border: 0;
+    top: 20%;
+    left: 33%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.botao3 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border: 0;
+    top: 43%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.botao4 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border: 0;
+    top: 83%;
+    left: 63%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.botao5 {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border: 0;
+    top: 32%;
+    left: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.botao1:hover, .botao2:hover, .botao3:hover, .botao4:hover, .botao5:hover {
+    transform: scale(1.1);
+}
+
+.fechar {
+    background-image: linear-gradient(to right, #7956a6, #3a7bd5);
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'creatodisplay';
+    color: white;
+    margin-top: 15px;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.texto_botao {
+    font-family: 'schoolbell';
+    font-size: 0.95rem;
+    color: #7956a6;
+}
+
+.popup {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.inner-popup {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+    width: 90%;
+    max-width: 380px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.inner-popup h1 {
+    font-family: 'schoolbell';
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.inner-popup p {
+    font-family: 'creatodisplay';
+    font-size: 1rem;
+    padding: 10px;
+    color: #333;
+    line-height: 1.5;
+}

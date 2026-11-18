@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url('Coolvetica Rg.otf') format('opentype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("fundocelular.png");
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar {
+    background-color: #000000;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: 'coolvetica', sans-serif;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.navbar li a:hover {
+    background-color: #1d1d1d;
+}
